@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduSync — образовательная платформа</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a class="logo" href="#">EduSync</a>
+    <nav>
+      <a href="#courses">Курсы</a>
+      <a href="#about">О платформе</a>
+      <a href="#progress">Мой прогресс</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <p class="label">ОБРАЗОВАТЕЛЬНАЯ ПЛАТФОРМА</p>
+    <h1>Учись в своём темпе<br><span>вместе с EduSync</span></h1>
+    <p>Курсы, учебные материалы и отслеживание прогресса в одном месте.</p>
+    <a class="button" href="#courses">Посмотреть курсы</a>
+  </section>
+
+  <section id="courses">
+    <h2>Наши курсы</h2>
+    <input id="search" type="text" placeholder="Поиск курса...">
+
+    <div class="courses">
+      <article class="course">
+        <h3>Веб-разработка</h3>
+        <p>Изучение HTML, CSS и создание сайтов.</p>
+        <button onclick="openCourse('Веб-разработка')">Открыть курс</button>
+      </article>
+
+      <article class="course">
+        <h3>Программирование</h3>
+        <p>Основы алгоритмов и программирования.</p>
+        <button onclick="openCourse('Программирование')">Открыть курс</button>
+      </article>
+
+      <article class="course">
+        <h3>Цифровая грамотность</h3>
+        <p>Полезные цифровые навыки для учёбы.</p>
+        <button onclick="openCourse('Цифровая грамотность')">Открыть курс</button>
+      </article>
+    </div>
+    <p id="message"></p>
+  </section>
+
+  <section id="about">
+    <h2>Возможности EduSync</h2>
+    <div class="features">
+      <div>📚 Учебные материалы</div>
+      <div>📈 Отслеживание прогресса</div>
+      <div>🎯 Рекомендации курсов</div>
+    </div>
+  </section>
+
+  <section id="progress">
+    <h2>Мой прогресс</h2>
+    <p>Выполнено учебных модулей: <strong>8 из 12</strong></p>
+    <div class="progress">
+      <div></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>EduSync — демонстрационный учебный проект</p>
+    <a href="https://adangeorge.wixsite.com/edusync">Мой сайт Wix</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
