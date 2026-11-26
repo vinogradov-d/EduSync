@@ -29,3 +29,4 @@ search.addEventListener("input", function () {
 function openCourse(courseName) {
   alert("Вы открыли курс: " + courseName);
 }
+// Улучшение: добавлена обработка поиска курсов по названию.
