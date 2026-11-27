@@ -3,74 +3,119 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EduSync — образовательная платформа</title>
+  <meta name="description" content="EduSync — интеллектуальная образовательная платформа для студентов.">
+  <title>EduSync — интеллектуальная платформа для студентов</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <a class="logo" href="#">EduSync</a>
-    <nav>
-      <a href="#courses">Курсы</a>
-      <a href="#about">О платформе</a>
-      <a href="#progress">Мой прогресс</a>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="EduSync — главная">
+      <span class="brand-mark">∞</span><span>EduSync</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#home">Home</a>
+      <a href="#materials">Материалы</a>
+      <a href="#registration">Регистрация</a>
+      <a href="#marathons">Марафоны</a>
+      <a href="#notifications">Notifications</a>
     </nav>
+    <div class="header-actions">
+      <button class="icon-button notification-trigger" aria-label="Уведомления" data-scroll="#notifications">♧<span class="notification-dot">2</span></button>
+      <button class="icon-button" aria-label="Профиль" data-scroll="#registration">●</button>
+      <span class="lock-icon" aria-label="Безопасность">▣</span>
+    </div>
   </header>
 
-  <section class="hero">
-    <p class="label">ОБРАЗОВАТЕЛЬНАЯ ПЛАТФОРМА</p>
-    <h1>Учись в своём темпе<br><span>вместе с EduSync</span></h1>
-    <p>Курсы, учебные материалы и отслеживание прогресса в одном месте.</p>
-    <a class="button" href="#courses">Посмотреть курсы</a>
-  </section>
+  <main>
+    <section class="hero page-section" id="home">
+      <div class="hero-copy">
+        <h1>Интеллектуальная платформа<br>для студентов</h1>
+        <p>EduSync — ваш инструмент для эффективного обучения, персонализированного прогресса и доступа к высококачественным образовательным материалам.</p>
+      </div>
+      <img class="hero-image" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1400&q=85" alt="Студентка занимается в современной библиотеке">
+    </section>
 
-  <section id="courses">
-    <h2>Наши курсы</h2>
-    <input id="search" type="text" placeholder="Поиск курса...">
+    <section class="page-section materials-section" id="materials">
+      <div class="section-heading">
+        <p class="eyebrow">EDUSYNC LIBRARY</p>
+        <h2>Библиотека материалов</h2>
+        <p>Подборка полезных материалов для самостоятельного обучения.</p>
+      </div>
+      <div class="material-grid">
+        <article class="material-card">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80" alt="Ноутбук и рабочее место">
+          <div class="card-content"><h3>Математический анализ</h3><p>Подробные курсы лекций по дифференциальным уравнениям и теории рядов для студентов первого курса.</p><a class="outline-button" href="#materials" data-demo="PDF: Математический анализ">Скачать PDF</a></div>
+        </article>
+        <article class="material-card">
+          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80" alt="Учебники на столе">
+          <div class="card-content"><h3>Программирование</h3><p>Инструкция по созданию веб-приложений на Python и JavaScript с практическими заданиями.</p><a class="outline-button" href="#materials" data-demo="PDF: Программирование">Скачать PDF</a></div>
+        </article>
+        <article class="material-card">
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Цифровые учебные материалы">
+          <div class="card-content"><h3>Физика и химия</h3><p>Комплексные лабораторные работы и теоретические материалы для подготовки к занятиям.</p><a class="outline-button" href="#materials" data-demo="PDF: Физика и химия">Скачать PDF</a></div>
+        </article>
+      </div>
+    </section>
 
-    <div class="courses">
-      <article class="course">
-        <h3>Веб-разработка</h3>
-        <p>Изучение HTML, CSS и создание сайтов.</p>
-        <button onclick="openCourse('Веб-разработка')">Открыть курс</button>
-      </article>
+    <section class="page-section media-section" id="videos">
+      <div class="section-heading centered">
+        <p class="eyebrow">LEARN ANYWHERE</p>
+        <h2>Видео и задания</h2>
+        <p>Интерактивная галерея учебных материалов, включая видеолекции и практические задания для студентов.</p>
+      </div>
+      <div class="media-gallery">
+        <img src="https://images.unsplash.com/photo-1584697964358-3e14ca57658b?auto=format&fit=crop&w=900&q=80" alt="Лекционная аудитория">
+        <img class="gallery-tall" src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="Технологии и цифровое обучение">
+        <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=900&q=80" alt="Планшет для обучения">
+        <div class="gallery-tile book-tile"><span>▤</span><small>Учебная библиотека</small></div>
+        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80" alt="Работа над учебным заданием">
+        <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=900&q=80" alt="Работа за компьютером">
+      </div>
+    </section>
 
-      <article class="course">
-        <h3>Программирование</h3>
-        <p>Основы алгоритмов и программирования.</p>
-        <button onclick="openCourse('Программирование')">Открыть курс</button>
-      </article>
+    <section class="page-section marathons-section" id="marathons">
+      <div class="section-heading">
+        <p class="eyebrow">STUDY TOGETHER</p>
+        <h2>Марафоны</h2>
+        <p>Развивайте навыки и двигайтесь к учебным целям вместе с другими студентами.</p>
+      </div>
+      <div class="marathon-grid">
+        <article class="marathon-card"><img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=900&q=80" alt="Студенты на занятии"><div><h3>Методы эффективного планирования и анализа личного прогресса</h3><p>Бесплатно</p><button class="primary-button" data-demo="Марафон: Методы эффективного планирования">Подробности</button></div></article>
+        <article class="marathon-card"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80" alt="Студенты работают вместе"><div><h3>Технологии умного обучения: базовый курс</h3><p>Бесплатно</p><button class="primary-button" data-demo="Марафон: Технологии умного обучения">Подробности</button></div></article>
+        <article class="marathon-card"><img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=900&q=80" alt="Группа студентов"><div><h3>Развитие навыков самообразования через современные платформы</h3><p>Бесплатно</p><button class="primary-button" data-demo="Марафон: Навыки самообразования">Подробности</button></div></article>
+      </div>
+    </section>
 
-      <article class="course">
-        <h3>Цифровая грамотность</h3>
-        <p>Полезные цифровые навыки для учёбы.</p>
-        <button onclick="openCourse('Цифровая грамотность')">Открыть курс</button>
-      </article>
-    </div>
-    <p id="message"></p>
-  </section>
+    <section class="page-section registration-section" id="registration">
+      <form class="registration-card" id="registrationForm">
+        <h2>Создайте аккаунт</h2>
+        <p>Присоединяйтесь к EduSync и получайте индивидуальные рекомендации курсов, отслеживайте свой прогресс и пользуйтесь доступом к учебным материалам.</p>
+        <div class="form-row">
+          <label>Имя*<input name="firstName" required placeholder="Иван"></label>
+          <label>Фамилия*<input name="lastName" required placeholder="Иванов"></label>
+        </div>
+        <label>Электронная почта*<input name="email" type="email" required placeholder="example@edusync.ru"></label>
+        <button class="primary-button full-button" type="submit">Зарегистрироваться</button>
+        <p class="form-note" id="formMessage" role="status">Поля, отмеченные *, обязательны для заполнения.</p>
+      </form>
+    </section>
 
-  <section id="about">
-    <h2>Возможности EduSync</h2>
-    <div class="features">
-      <div>📚 Учебные материалы</div>
-      <div>📈 Отслеживание прогресса</div>
-      <div>🎯 Рекомендации курсов</div>
-    </div>
-  </section>
+    <section class="page-section notifications-section" id="notifications">
+      <div class="notifications-head"><h2>Уведомления</h2><button class="text-button" id="markAllRead">Отметить все как прочитанные (2)</button></div>
+      <div class="notification-list">
+        <article class="notification unread"><span class="avatar">●</span><p><strong>John Smith</strong> likes your post 'some post'.</p><time>сейчас</time><span class="unread-dot"></span></article>
+        <article class="notification unread"><span class="avatar">●</span><p><strong>Chew Chang</strong> likes your post 'some post'.</p><time>1 час назад</time><span class="unread-dot"></span></article>
+        <article class="notification"><span class="avatar">●</span><p><strong>Brad Pitt</strong> likes your post 'some post'.</p><time>вчера</time></article>
+      </div>
+    </section>
+  </main>
 
-  <section id="progress">
-    <h2>Мой прогресс</h2>
-    <p>Выполнено учебных модулей: <strong>8 из 12</strong></p>
-    <div class="progress">
-      <div></div>
-    </div>
-  </section>
-
-  <footer>
-    <p>EduSync — демонстрационный учебный проект</p>
-    <a href="https://adangeorge.wixsite.com/edusync">Мой сайт Wix</a>
-  </footer>
-
-  <script src="script.js"></script>
+  <footer class="site-footer"><a class="footer-wordmark" href="#home">EDUSYNC</a><p>Интеллектуальная образовательная платформа</p><a href="#home">Наверх ↑</a></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
